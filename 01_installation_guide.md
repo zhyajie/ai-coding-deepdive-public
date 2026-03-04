@@ -69,8 +69,7 @@ Append the following to the end of `~/.bashrc`:
 # === Claude Code + AMD LLM Gateway ===
 export ANTHROPIC_BASE_URL="https://llm-api.amd.com/Anthropic"
 export ANTHROPIC_API_KEY="dummy"
-export ANTHROPIC_CUSTOM_HEADERS="Ocp-Apim-Subscription-Key: your apikey
-user: $(whoami)"
+export ANTHROPIC_CUSTOM_HEADERS="Ocp-Apim-Subscription-Key: your apikey,user: $(whoami)"
 export DISABLE_PROMPT_CACHING="1"
 alias claude='claude --model claude-opus-4.6'
 ```
