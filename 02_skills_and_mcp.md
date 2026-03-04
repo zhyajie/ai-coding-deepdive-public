@@ -128,11 +128,11 @@ npx skills add vercel-labs/skills -g -y
 
 ### Superpowers 插件
 
-来自 `obra/superpowers-marketplace` 社区仓库：
+来自 `anthropics/claude-plugins-official` 官方仓库：
 
 ```
 # 1. 注册 Marketplace
-/plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add anthropics/claude-plugins-official
 
 # 2. 安装插件
 /plugin install superpowers@claude-plugins-official
@@ -177,7 +177,7 @@ npx skills add vercel-labs/skills -g -y
 |------|------|------|
 | 注册官方 Skills | `/plugin marketplace add anthropics/skills` | 文档类 + 示例类 Skill |
 | 注册官方 Plugins | `/plugin marketplace add anthropics/claude-code` | Ralph Wiggum 等官方插件 |
-| 注册 Superpowers | `/plugin marketplace add obra/superpowers-marketplace` | Superpowers 社区插件 |
+| 注册 Superpowers | `/plugin marketplace add anthropics/claude-plugins-official` | Superpowers 官方插件 |
 | 安装插件 | `/plugin install <name>@<marketplace>` | 注册后安装具体插件 |
 | skills.sh 生态 | `npx skills add <package> -g -y` | 社区第三方 Skill |
 | 手动安装 | 将 `.md` 文件放到 `~/.claude/commands/` | 自定义 Skill |
