@@ -33,13 +33,22 @@
 
 ## 已安装 Skills 一览
 
-> 绝大部分 Skill 通过 Anthropic 官方 Skills 仓库一键安装：
->
-> ```
-> /install anthropics/skills
-> ```
+> 绝大部分 Skill 通过 Anthropic 官方 Skills 仓库安装。
 >
 > 仓库地址：https://github.com/anthropics/skills
+>
+> **安装步骤**：
+>
+> 1. 在 Claude Code 中注册 Marketplace：
+>    ```
+>    /plugin marketplace add anthropics/skills
+>    ```
+> 2. 安装官方 Skills 插件（二选一或都装）：
+>    ```
+>    /plugin install document-skills@anthropic-agent-skills
+>    /plugin install example-skills@anthropic-agent-skills
+>    ```
+>    或者通过交互式安装：输入 `/plugin`，选择 `Browse and install plugins` → `anthropic-agent-skills` → 选择要安装的插件 → `Install now`
 
 ### 开发工具类
 
@@ -170,7 +179,8 @@ npx skills add vercel-labs/skills -g -y
 
 | 方式 | 命令 | 说明 |
 |------|------|------|
-| 官方 Skills 仓库 | `/install anthropics/skills` | 一键安装所有官方 Skill |
-| 官方 Plugins | `/install anthropics/claude-plugins-official` | Superpowers 等插件 |
+| 注册官方 Marketplace | `/plugin marketplace add anthropics/skills` | 注册后可浏览和安装官方 Skill |
+| 安装文档类 Skills | `/plugin install document-skills@anthropic-agent-skills` | PDF/DOCX/PPTX/XLSX 等 |
+| 安装示例类 Skills | `/plugin install example-skills@anthropic-agent-skills` | 开发/设计/前端等 |
 | skills.sh 生态 | `npx skills add <package> -g -y` | 社区第三方 Skill |
 | 手动安装 | 将 `.md` 文件放到 `~/.claude/commands/` | 自定义 Skill |
