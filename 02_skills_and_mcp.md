@@ -100,36 +100,27 @@
 
 ---
 
-## 手动安装的 Skills
-
-以下 Skill 需要单独安装：
+## 其他 Skills 安装
 
 ### Find Skills
 
 ```bash
-# 安装
 npx skills add vercel-labs/skills -g -y
 ```
 
 - **功能**：从开源生态搜索和安装新 Skill
 - **浏览**：https://skills.sh/
 
-### Code Simplifier
-
-```bash
-# 在 Claude Code 中执行
-/install anthropics/claude-plugins-official
-# 或手动下载放到 ~/.claude/skills/code-simplifier.md
-```
-
-- **功能**：自动简化和优化代码，只改写法不改行为
-
 ### Ralph Wiggum — 迭代开发循环
 
-```bash
-# 在 Claude Code 中执行
-/install anthropics/claude-code
-# 或手动下载放到 ~/.claude/skills/ralph-wiggum/
+来自 `anthropics/claude-code` 官方仓库的插件：
+
+```
+# 1. 注册 Marketplace
+/plugin marketplace add anthropics/claude-code
+
+# 2. 安装插件
+/plugin install ralph-wiggum@claude-code-plugins
 ```
 
 - **功能**：Claude 反复执行任务直到满足完成条件
@@ -137,9 +128,14 @@ npx skills add vercel-labs/skills -g -y
 
 ### Superpowers 插件
 
-```bash
-# 在 Claude Code 中执行
-/install anthropics/claude-plugins-official
+来自 `obra/superpowers-marketplace` 社区仓库：
+
+```
+# 1. 注册 Marketplace
+/plugin marketplace add obra/superpowers-marketplace
+
+# 2. 安装插件
+/plugin install superpowers@claude-plugins-official
 ```
 
 | Skill | 说明 |
@@ -179,8 +175,9 @@ npx skills add vercel-labs/skills -g -y
 
 | 方式 | 命令 | 说明 |
 |------|------|------|
-| 注册官方 Marketplace | `/plugin marketplace add anthropics/skills` | 注册后可浏览和安装官方 Skill |
-| 安装文档类 Skills | `/plugin install document-skills@anthropic-agent-skills` | PDF/DOCX/PPTX/XLSX 等 |
-| 安装示例类 Skills | `/plugin install example-skills@anthropic-agent-skills` | 开发/设计/前端等 |
+| 注册官方 Skills | `/plugin marketplace add anthropics/skills` | 文档类 + 示例类 Skill |
+| 注册官方 Plugins | `/plugin marketplace add anthropics/claude-code` | Ralph Wiggum 等官方插件 |
+| 注册 Superpowers | `/plugin marketplace add obra/superpowers-marketplace` | Superpowers 社区插件 |
+| 安装插件 | `/plugin install <name>@<marketplace>` | 注册后安装具体插件 |
 | skills.sh 生态 | `npx skills add <package> -g -y` | 社区第三方 Skill |
 | 手动安装 | 将 `.md` 文件放到 `~/.claude/commands/` | 自定义 Skill |
